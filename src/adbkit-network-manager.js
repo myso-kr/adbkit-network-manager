@@ -13,5 +13,5 @@ Client.prototype.networkCellular = async function(serial, options) {
 }
 Client.prototype.networkAirplane = async function(serial, options) {  
   await this.shellWait(serial, `settings put global airplane_mode_on ${options.state ? '1' : '0'}`);
-  await this.shellWait(serial, `am broadcast -a android.intent.action.AIRPLANE_MODE`);
+  await this.shellWait(serial, `am broadcast -a android.intent.action.AIRPLANE_MODE --ez state true`);
 }
