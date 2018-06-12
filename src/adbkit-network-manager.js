@@ -2,7 +2,7 @@ import _ from 'lodash';
 import Promise from 'bluebird';
 
 import ADB from 'adbkit';
-import './adb-shell-wait';
+import './adbkit-shell-wait';
 
 import Client from 'adbkit/lib/adb/client';
 Client.prototype.networkWiFi = async function(serial, options) {
